@@ -16,21 +16,43 @@
 
 package sg.yikjiun.scf4j.set;
 
+import gnu.trove.set.TByteSet;
+
 /**
  * @author Lee Yik Jiun
  */
-public interface CharSet {
-    boolean add(char c);
+public class TroveByteSetAdapter implements ByteSet {
+    private final TByteSet set;
 
-    void clear();
+    public TroveByteSetAdapter(TByteSet set) {
+        this.set = set;
+    }
 
-    boolean contains(char c);
+    public boolean add(byte b) {
+        return set.add(b);
+    }
 
-    boolean isEmpty();
+    public void clear() {
+        set.clear();
+    }
 
-    boolean remove(char c);
+    public boolean contains(byte b) {
+        return set.contains(b);
+    }
 
-    int size();
+    public boolean isEmpty() {
+        return set.isEmpty();
+    }
 
-    char[] toArray();
+    public boolean remove(byte b) {
+        return set.remove(b);
+    }
+
+    public int size() {
+        return set.size();
+    }
+
+    public byte[] toArray() {
+        return set.toArray();
+    }
 }

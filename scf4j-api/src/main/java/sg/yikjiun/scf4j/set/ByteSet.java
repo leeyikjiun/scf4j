@@ -30,7 +30,7 @@ public interface ByteSet {
 
     boolean remove(byte b);
 
-    byte size();
+    int size();
 
     byte[] toArray();
 }

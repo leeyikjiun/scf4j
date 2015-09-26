@@ -34,8 +34,6 @@ public class IntIntMapFactoryAdapter {
     }
 
     public IntIntMap createIntIntHashMap() {
-        MapFactory factory = null;
-        IntIntMap map = factory.createIntDoubleHashMap();
         throw new UnsupportedOperationException();
     }
 }

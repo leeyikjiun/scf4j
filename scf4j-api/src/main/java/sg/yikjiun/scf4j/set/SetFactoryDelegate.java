@@ -16,15 +16,39 @@
 
 package sg.yikjiun.scf4j.set;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * @author Lee Yik Jiun
  */
-public class JDKIntSetFactory implements IIntSetFactory {
-    public IntSet createIntHashSet() {
-        Set<Integer> set = new HashSet<Integer>();
-        return new JDKIntSetAdapter(set);
-    }
+public interface SetFactoryDelegate {
+    IntSet createIntHashSet();
+
+    ByteSet createByteHashSet();
+
+    ShortSet createShortHashSet();
+
+    LongSet createLongHashSet();
+
+    DoubleSet createDoubleHashSet();
+
+    FloatSet createFloatHashSet();
+
+    CharSet createCharHashSet();
+
+    BooleanSet createBooleanHashSet();
+
+    IntSet createIntTreeSet();
+
+    ByteSet createByteTreeSet();
+
+    ShortSet createShortTreeSet();
+
+    LongSet createLongTreeSet();
+
+    DoubleSet createDoubleTreeSet();
+
+    FloatSet createFloatTreeSet();
+
+    CharSet createCharTreeSet();
+
+    BooleanSet createBooleanTreeSet();
 }

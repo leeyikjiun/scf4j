@@ -16,21 +16,43 @@
 
 package sg.yikjiun.scf4j.set;
 
+import gnu.trove.set.TLongSet;
+
 /**
  * @author Lee Yik Jiun
  */
-public interface CharSet {
-    boolean add(char c);
+public class TroveLongSetAdapter implements LongSet {
+    private final TLongSet set;
 
-    void clear();
+    public TroveLongSetAdapter(TLongSet set) {
+        this.set = set;
+    }
 
-    boolean contains(char c);
+    public boolean add(long l) {
+        return set.add(l);
+    }
 
-    boolean isEmpty();
+    public void clear() {
+        set.clear();
+    }
 
-    boolean remove(char c);
+    public boolean contains(long l) {
+        return set.contains(l);
+    }
 
-    int size();
+    public boolean isEmpty() {
+        return set.isEmpty();
+    }
 
-    char[] toArray();
+    public boolean remove(long l) {
+        return set.remove(l);
+    }
+
+    public int size() {
+        return set.size();
+    }
+
+    public long[] toArray() {
+        return set.toArray();
+    }
 }

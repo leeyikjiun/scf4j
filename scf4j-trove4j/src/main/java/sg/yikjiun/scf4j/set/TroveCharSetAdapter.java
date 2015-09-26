@@ -16,14 +16,43 @@
 
 package sg.yikjiun.scf4j.set;
 
-import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
+import gnu.trove.set.TCharSet;
 
 /**
  * @author Lee Yik Jiun
  */
-public class FastUtilIntSetFactory implements IIntSetFactory {
-    public IntSet createIntHashSet() {
-        it.unimi.dsi.fastutil.ints.IntSet set = new IntOpenHashSet();
-        return new FastUtilIntSetAdapter(set);
+public class TroveCharSetAdapter implements CharSet {
+    private final TCharSet set;
+
+    public TroveCharSetAdapter(TCharSet set) {
+        this.set = set;
+    }
+
+    public boolean add(char c) {
+        return set.add(c);
+    }
+
+    public void clear() {
+        set.clear();
+    }
+
+    public boolean contains(char c) {
+        return set.add(c);
+    }
+
+    public boolean isEmpty() {
+        return set.isEmpty();
+    }
+
+    public boolean remove(char c) {
+        return set.remove(c);
+    }
+
+    public int size() {
+        return set.size();
+    }
+
+    public char[] toArray() {
+        return set.toArray();
     }
 }

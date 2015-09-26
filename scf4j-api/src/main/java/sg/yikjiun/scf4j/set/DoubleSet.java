@@ -30,7 +30,7 @@ public interface DoubleSet {
 
     boolean remove(double d);
 
-    double size();
+    int size();
 
     double[] toArray();
 }

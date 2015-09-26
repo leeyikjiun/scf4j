@@ -30,7 +30,7 @@ public interface BooleanSet {
 
     boolean remove(boolean b);
 
-    boolean size();
+    int size();
 
     boolean[] toArray();
 }

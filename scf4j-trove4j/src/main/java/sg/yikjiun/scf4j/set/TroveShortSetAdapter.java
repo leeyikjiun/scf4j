@@ -16,15 +16,43 @@
 
 package sg.yikjiun.scf4j.set;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
+import gnu.trove.set.TShortSet;
 
 /**
  * @author Lee Yik Jiun
  */
-public class TroveIntSetFactory implements IIntSetFactory {
-    public IntSet createIntHashSet() {
-        TIntSet set = new TIntHashSet();
-        return new TroveIntSetAdapter(set);
+public class TroveShortSetAdapter implements ShortSet {
+    private final TShortSet set;
+
+    public TroveShortSetAdapter(TShortSet set) {
+        this.set = set;
+    }
+
+    public boolean add(short s) {
+        return set.add(s);
+    }
+
+    public void clear() {
+        set.clear();
+    }
+
+    public boolean contains(short s) {
+        return set.contains(s);
+    }
+
+    public boolean isEmpty() {
+        return set.isEmpty();
+    }
+
+    public boolean remove(short s) {
+        return set.remove(s);
+    }
+
+    public int size() {
+        return set.size();
+    }
+
+    public short[] toArray() {
+        return set.toArray();
     }
 }

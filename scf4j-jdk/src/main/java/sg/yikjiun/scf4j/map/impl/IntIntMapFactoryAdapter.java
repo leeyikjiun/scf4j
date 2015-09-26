@@ -16,7 +16,7 @@
 
 package sg.yikjiun.scf4j.map.impl;
 
-import sg.yikjiun.scf4j.IntIntMap;
+import sg.yikjiun.scf4j.map.IntIntMap;
 import sg.yikjiun.scf4j.map.JDKIntIntMapFactory;
 
 /**

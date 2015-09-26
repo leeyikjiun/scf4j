@@ -30,7 +30,7 @@ public interface LongSet {
 
     boolean remove(long l);
 
-    long size();
+    int size();
 
     long[] toArray();
 }

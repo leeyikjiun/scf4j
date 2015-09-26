@@ -30,7 +30,7 @@ public interface FloatSet {
 
     boolean remove(float f);
 
-    float size();
+    int size();
 
     float[] toArray();
 }

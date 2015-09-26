@@ -16,26 +16,16 @@
 
 package sg.yikjiun.scf4j.set.impl;
 
-import sg.yikjiun.scf4j.set.IntSet;
-import sg.yikjiun.scf4j.set.JDKIntSetFactory;
+import sg.yikjiun.scf4j.set.SetFactoryDelegate;
+import sg.yikjiun.scf4j.set.TroveSetFactory;
 
 /**
  * @author Lee Yik Jiun
  */
-public class IntSetFactoryAdapter {
-    private static final IntSetFactoryAdapter instance = new IntSetFactoryAdapter();
+public class SetFactoryProvider {
+    private static final SetFactoryDelegate factory = new TroveSetFactory();
 
-    private static final JDKIntSetFactory factory = new JDKIntSetFactory();
-
-    private IntSetFactoryAdapter() {
-
-    }
-
-    public static IntSetFactoryAdapter getInstance() {
-        return instance;
-    }
-
-    public IntSet createIntSet() {
-        return factory.createIntHashSet();
+    public SetFactoryDelegate getSetFactory() {
+        return factory;
     }
 }

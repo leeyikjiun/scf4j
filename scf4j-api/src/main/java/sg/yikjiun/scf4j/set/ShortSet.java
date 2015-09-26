@@ -30,7 +30,7 @@ public interface ShortSet {
 
     boolean remove(short s);
 
-    boolean size();
+    int size();
 
-    boolean[] toArray();
+    short[] toArray();
 }

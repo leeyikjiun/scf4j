@@ -14,11 +14,21 @@
  * limitations under the License.
  */
 
-package sg.yikjiun.scf4j.set;
+package sg.yikjiun.scf4j.set.impl;
+
+import sg.yikjiun.scf4j.set.SetFactoryDelegate;
 
 /**
  * @author Lee Yik Jiun
  */
-interface IIntSetFactory {
-    IntSet createIntHashSet();
+public class SetFactoryProvider {
+    private static final SetFactoryProvider instance = new SetFactoryProvider();
+
+    public static SetFactoryProvider getInstance() {
+        return instance;
+    }
+
+    public SetFactoryDelegate getSetFactory() {
+        throw new UnsupportedOperationException();
+    }
 }

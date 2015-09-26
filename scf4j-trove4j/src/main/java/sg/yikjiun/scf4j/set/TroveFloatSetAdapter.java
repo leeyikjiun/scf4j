@@ -16,21 +16,43 @@
 
 package sg.yikjiun.scf4j.set;
 
+import gnu.trove.set.TFloatSet;
+
 /**
  * @author Lee Yik Jiun
  */
-public interface CharSet {
-    boolean add(char c);
+public class TroveFloatSetAdapter implements FloatSet {
+    private final TFloatSet set;
 
-    void clear();
+    public TroveFloatSetAdapter(TFloatSet set) {
+        this.set = set;
+    }
 
-    boolean contains(char c);
+    public boolean add(float f) {
+        return set.add(f);
+    }
 
-    boolean isEmpty();
+    public void clear() {
+        set.clear();
+    }
 
-    boolean remove(char c);
+    public boolean contains(float f) {
+        return set.contains(f);
+    }
 
-    int size();
+    public boolean isEmpty() {
+        return set.isEmpty();
+    }
 
-    char[] toArray();
+    public boolean remove(float f) {
+        return set.remove(f);
+    }
+
+    public int size() {
+        return set.size();
+    }
+
+    public float[] toArray() {
+        return set.toArray();
+    }
 }
