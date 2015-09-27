@@ -28,62 +28,76 @@ public class SetFactory {
     }
 
     public static ShortSet createShortHashSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createShortHashSet();
     }
 
     public static ByteSet createByteHashSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createByteHashSet();
     }
 
     public static CharSet createCharHashSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createCharHashSet();
     }
 
     public static LongSet createLongHashSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createLongHashSet();
     }
 
     public static DoubleSet createDoubleHashSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createDoubleHashSet();
     }
 
     public static FloatSet createFloatHashSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createFloatHashSet();
     }
 
     public static BooleanSet createBooleanHashSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createBooleanHashSet();
     }
 
     public static IntSet createIntTreeSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createIntTreeSet();
     }
 
     public static ShortSet createShortTreeSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createShortTreeSet();
     }
 
     public static ByteSet createByteTreeSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createByteTreeSet();
     }
 
     public static CharSet createCharTreeSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createCharTreeSet();
     }
 
     public static LongSet createLongTreeSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createLongTreeSet();
     }
-
     public static DoubleSet createDoubleTreeSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createDoubleTreeSet();
     }
 
     public static FloatSet createFloatTreeSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createFloatTreeSet();
     }
 
     public static BooleanSet createBooleanTreeSet() {
-        return null;
+        SetFactoryDelegate factory = SetFactoryProvider.getInstance().getSetFactory();
+        return factory.createBooleanTreeSet();
     }
 }
