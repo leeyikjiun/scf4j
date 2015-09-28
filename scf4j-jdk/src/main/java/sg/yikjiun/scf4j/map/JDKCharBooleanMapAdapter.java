@@ -20,10 +20,10 @@ import java.util.Map;
 /**
  * @author Lee Yik Jiun
  */
-public class JDKIntIntMapAdapter implements IntIntMap {
-    private final Map<Integer, Integer> map;
+public class JDKCharBooleanMapAdapter implements CharBooleanMap {
+    private final Map<Character, Boolean> map;
 
-    public JDKIntIntMapAdapter(Map<Integer, Integer> map) {
+    public JDKCharBooleanMapAdapter(Map<Character, Boolean> map) {
         this.map = map;
     }
 
@@ -31,15 +31,15 @@ public class JDKIntIntMapAdapter implements IntIntMap {
         map.clear();
     }
 
-    public boolean containsKey(int key) {
+    public boolean containsKey(char key) {
         return map.containsKey(key);
     }
 
-    public boolean containsValue(int value) {
+    public boolean containsValue(boolean value) {
         return map.containsValue(value);
     }
 
-    public int get(int key) {
+    public boolean get(char key) {
         return map.get(key);
     }
 
@@ -47,11 +47,11 @@ public class JDKIntIntMapAdapter implements IntIntMap {
         return map.isEmpty();
     }
 
-    public int put(int key, int value) {
+    public boolean put(char key, boolean value) {
         return map.put(key, value);
     }
 
-    public int remove(int key) {
+    public boolean remove(char key) {
         return map.remove(key);
     }
 

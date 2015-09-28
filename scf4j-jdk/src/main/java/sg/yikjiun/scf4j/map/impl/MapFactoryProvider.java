@@ -16,26 +16,22 @@
 
 package sg.yikjiun.scf4j.map.impl;
 
-import sg.yikjiun.scf4j.map.IntIntMap;
-import sg.yikjiun.scf4j.map.JDKIntIntMapFactory;
+import sg.yikjiun.scf4j.map.JDKMapFactory;
+import sg.yikjiun.scf4j.map.MapFactoryDelegate;
 
 /**
  * @author Lee Yik Jiun
  */
-public class IntIntMapFactoryAdapter {
-    private static final IntIntMapFactoryAdapter instance = new IntIntMapFactoryAdapter();
+public class MapFactoryProvider {
+    private static final MapFactoryProvider instance = new MapFactoryProvider();
 
-    private static final JDKIntIntMapFactory factory = new JDKIntIntMapFactory();
+    private static final MapFactoryDelegate factory = new JDKMapFactory();
 
-    private IntIntMapFactoryAdapter() {
-
-    }
-
-    public static IntIntMapFactoryAdapter getInstance() {
+    public static MapFactoryProvider getInstance() {
         return instance;
     }
 
-    public IntIntMap createIntIntHashMap() {
-        return factory.createIntIntHashMap();
+    public MapFactoryDelegate getMapFactory() {
+        return factory;
     }
 }
