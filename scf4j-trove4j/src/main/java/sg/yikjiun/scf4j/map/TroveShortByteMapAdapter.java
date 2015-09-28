@@ -16,15 +16,15 @@
 
 package sg.yikjiun.scf4j.map;
 
-import gnu.trove.map.TIntIntMap;
+import gnu.trove.map.TShortByteMap;
 
 /**
  * @author Lee Yik Jiun
  */
-public class TroveIntIntMapAdapter implements IntIntMap {
-    private final TIntIntMap map;
+public class TroveShortByteMapAdapter implements ShortByteMap {
+    private final TShortByteMap map;
 
-    public TroveIntIntMapAdapter(TIntIntMap map) {
+    public TroveShortByteMapAdapter(TShortByteMap map) {
         this.map = map;
     }
 
@@ -32,15 +32,15 @@ public class TroveIntIntMapAdapter implements IntIntMap {
         map.clear();
     }
 
-    public boolean containsKey(int key) {
+    public boolean containsKey(short key) {
         return map.containsKey(key);
     }
 
-    public boolean containsValue(int value) {
+    public boolean containsValue(byte value) {
         return map.containsValue(value);
     }
 
-    public int get(int key) {
+    public byte get(short key) {
         return map.get(key);
     }
 
@@ -48,11 +48,11 @@ public class TroveIntIntMapAdapter implements IntIntMap {
         return map.isEmpty();
     }
 
-    public int put(int key, int value) {
+    public byte put(short key, byte value) {
         return map.put(key, value);
     }
 
-    public int remove(int key) {
+    public byte remove(short key) {
         return map.remove(key);
     }
 
