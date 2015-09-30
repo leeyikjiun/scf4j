@@ -16,15 +16,15 @@
 
 package sg.yikjiun.scf4j.list;
 
-import java.util.List;
+import gnu.trove.list.TLongList;
 
 /**
  * @author Lee Yik Jiun
  */
-public class JDKLongListAdapter implements LongList {
-    private final List<Long> list;
+public class TroveLongListAdapter implements LongList {
+    private final TLongList list;
 
-    public JDKLongListAdapter(List<Long> list) {
+    public TroveLongListAdapter(TLongList list) {
         this.list = list;
     }
 
@@ -41,12 +41,7 @@ public class JDKLongListAdapter implements LongList {
     }
 
     public long[] toArray() {
-        long[] arr = new long[list.size()];
-        int i = 0;
-        for (Long l : list) {
-            arr[i++] = l;
-        }
-        return arr;
+        return list.toArray();
     }
 
     public boolean add(long l) {
@@ -54,7 +49,7 @@ public class JDKLongListAdapter implements LongList {
     }
 
     public boolean remove(long l) {
-        return list.remove((Object) l);
+        return list.remove(l);
     }
 
     public void clear() {
@@ -70,11 +65,11 @@ public class JDKLongListAdapter implements LongList {
     }
 
     public void add(int index, long l) {
-        list.add(index, l);
+        list.insert(index, l);
     }
 
     public long removeAt(int index) {
-        return list.remove(index);
+        return list.removeAt(index);
     }
 
     public int indexOf(long l) {

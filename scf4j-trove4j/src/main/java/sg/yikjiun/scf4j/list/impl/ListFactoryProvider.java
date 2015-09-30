@@ -14,36 +14,18 @@
  * limitations under the License.
  */
 
-package sg.yikjiun.scf4j.list;
+package sg.yikjiun.scf4j.list.impl;
+
+import sg.yikjiun.scf4j.list.ListFactoryDelegate;
+import sg.yikjiun.scf4j.list.TroveListFactory;
 
 /**
  * @author Lee Yik Jiun
  */
-public interface BooleanList {
+public class ListFactoryProvider {
+    private static final ListFactoryDelegate factory = new TroveListFactory();
 
-    int size();
-
-    boolean isEmpty();
-
-    boolean contains(boolean b);
-
-    boolean[] toArray();
-
-    boolean add(boolean b);
-
-    boolean remove(boolean b);
-
-    void clear();
-
-    boolean get(int index);
-
-    boolean set(int index, boolean b);
-
-    void add(int index, boolean b);
-
-    boolean removeAt(int index);
-
-    int indexOf(boolean b);
-
-    int lastIndexOf(boolean b);
+    public ListFactoryDelegate getListFactory() {
+        return factory;
+    }
 }

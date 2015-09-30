@@ -25,13 +25,13 @@ public interface IntList {
 
     boolean isEmpty();
 
-    boolean contains(Object o);
+    boolean contains(int i);
 
     int[] toArray();
 
     boolean add(int i);
 
-    boolean remove(Object o);
+    boolean remove(int i);
 
     void clear();
 
@@ -41,9 +41,9 @@ public interface IntList {
 
     void add(int index, int i);
 
-    int remove(int index);
+    int removeAt(int index);
 
-    int indexOf(Object o);
+    int indexOf(int i);
 
-    int lastIndexOf(Object o);
+    int lastIndexOf(int i);
 }

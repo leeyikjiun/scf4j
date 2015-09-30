@@ -16,15 +16,15 @@
 
 package sg.yikjiun.scf4j.list;
 
-import java.util.List;
+import gnu.trove.list.TShortList;
 
 /**
  * @author Lee Yik Jiun
  */
-public class JDKLongListAdapter implements LongList {
-    private final List<Long> list;
+public class TroveShortListAdapter implements ShortList {
+    private final TShortList list;
 
-    public JDKLongListAdapter(List<Long> list) {
+    public TroveShortListAdapter(TShortList list) {
         this.list = list;
     }
 
@@ -36,52 +36,47 @@ public class JDKLongListAdapter implements LongList {
         return list.isEmpty();
     }
 
-    public boolean contains(long l) {
-        return list.contains(l);
+    public boolean contains(short s) {
+        return list.contains(s);
     }
 
-    public long[] toArray() {
-        long[] arr = new long[list.size()];
-        int i = 0;
-        for (Long l : list) {
-            arr[i++] = l;
-        }
-        return arr;
+    public short[] toArray() {
+        return list.toArray();
     }
 
-    public boolean add(long l) {
-        return list.add(l);
+    public boolean add(short s) {
+        return list.add(s);
     }
 
-    public boolean remove(long l) {
-        return list.remove((Object) l);
+    public boolean remove(short s) {
+        return list.remove(s);
     }
 
     public void clear() {
         list.clear();
     }
 
-    public long get(int index) {
+    public short get(int index) {
         return list.get(index);
     }
 
-    public long set(int index, long l) {
-        return list.set(index, l);
+    public short set(int index, short s) {
+        return list.set(index, s);
     }
 
-    public void add(int index, long l) {
-        list.add(index, l);
+    public void add(int index, short s) {
+        list.insert(index, s);
     }
 
-    public long removeAt(int index) {
-        return list.remove(index);
+    public short removeAt(int index) {
+        return list.removeAt(index);
     }
 
-    public int indexOf(long l) {
-        return list.indexOf(l);
+    public int indexOf(short s) {
+        return list.indexOf(s);
     }
 
-    public int lastIndexOf(long l) {
-        return list.lastIndexOf(l);
+    public int lastIndexOf(short s) {
+        return list.lastIndexOf(s);
     }
 }

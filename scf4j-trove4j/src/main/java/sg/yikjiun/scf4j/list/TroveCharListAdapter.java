@@ -16,15 +16,15 @@
 
 package sg.yikjiun.scf4j.list;
 
-import java.util.List;
+import gnu.trove.list.TCharList;
 
 /**
  * @author Lee Yik Jiun
  */
-public class JDKLongListAdapter implements LongList {
-    private final List<Long> list;
+public class TroveCharListAdapter implements CharList {
+    private final TCharList list;
 
-    public JDKLongListAdapter(List<Long> list) {
+    public TroveCharListAdapter(TCharList list) {
         this.list = list;
     }
 
@@ -36,52 +36,47 @@ public class JDKLongListAdapter implements LongList {
         return list.isEmpty();
     }
 
-    public boolean contains(long l) {
-        return list.contains(l);
+    public boolean contains(char c) {
+        return list.contains(c);
     }
 
-    public long[] toArray() {
-        long[] arr = new long[list.size()];
-        int i = 0;
-        for (Long l : list) {
-            arr[i++] = l;
-        }
-        return arr;
+    public char[] toArray() {
+        return list.toArray();
     }
 
-    public boolean add(long l) {
-        return list.add(l);
+    public boolean add(char c) {
+        return list.add(c);
     }
 
-    public boolean remove(long l) {
-        return list.remove((Object) l);
+    public boolean remove(char c) {
+        return list.remove(c);
     }
 
     public void clear() {
         list.clear();
     }
 
-    public long get(int index) {
+    public char get(int index) {
         return list.get(index);
     }
 
-    public long set(int index, long l) {
-        return list.set(index, l);
+    public char set(int index, char c) {
+        return list.set(index, c);
     }
 
-    public void add(int index, long l) {
-        list.add(index, l);
+    public void add(int index, char c) {
+        list.insert(index, c);
     }
 
-    public long removeAt(int index) {
-        return list.remove(index);
+    public char removeAt(int index) {
+        return list.removeAt(index);
     }
 
-    public int indexOf(long l) {
-        return list.indexOf(l);
+    public int indexOf(char c) {
+        return list.indexOf(c);
     }
 
-    public int lastIndexOf(long l) {
-        return list.lastIndexOf(l);
+    public int lastIndexOf(char c) {
+        return list.lastIndexOf(c);
     }
 }

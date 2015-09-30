@@ -17,6 +17,7 @@
 package sg.yikjiun.scf4j.list;
 
 import java.util.List;
+
 /**
  * @author Lee Yik Jiun
  */
@@ -27,7 +28,7 @@ public class JDKIntListAdapter implements IntList {
         this.list = list;
     }
 
-public int size() {
+    public int size() {
         return list.size();
     }
 
@@ -35,8 +36,8 @@ public int size() {
         return list.isEmpty();
     }
 
-    public boolean contains(Object o) {
-        return list.contains(o);
+    public boolean contains(int i) {
+        return list.contains(i);
     }
 
     public int[] toArray() {
@@ -52,8 +53,8 @@ public int size() {
         return list.add(i);
     }
 
-    public boolean remove(Object o) {
-        return list.remove(o);
+    public boolean remove(int i) {
+        return list.remove((Object) i);
     }
 
     public void clear() {
@@ -72,15 +73,15 @@ public int size() {
         list.add(index, i);
     }
 
-    public int remove(int index) {
+    public int removeAt(int index) {
         return list.remove(index);
     }
 
-    public int indexOf(Object o) {
-        return list.indexOf(o);
+    public int indexOf(int i) {
+        return list.indexOf(i);
     }
 
-    public int lastIndexOf(Object o) {
-        return list.lastIndexOf(o);
+    public int lastIndexOf(int i) {
+        return list.lastIndexOf(i);
     }
 }

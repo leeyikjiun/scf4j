@@ -34,8 +34,8 @@ public class FastUtilLongListAdapter implements LongList {
         return list.isEmpty();
     }
 
-    public boolean contains(Object o) {
-        return list.contains(o);
+    public boolean contains(long l) {
+        return list.contains(l);
     }
 
     public long[] toArray() {
@@ -46,8 +46,8 @@ public class FastUtilLongListAdapter implements LongList {
         return list.add(l);
     }
 
-    public boolean remove(Object o) {
-        return list.remove(o);
+    public boolean remove(long l) {
+        return list.remove((Object) l);
     }
 
     public void clear() {
@@ -66,15 +66,15 @@ public class FastUtilLongListAdapter implements LongList {
         list.add(index, l);
     }
 
-    public long remove(int index) {
+    public long removeAt(int index) {
         return list.remove(index);
     }
 
-    public int indexOf(Object o) {
-        return list.indexOf(o);
+    public int indexOf(long l) {
+        return list.indexOf(l);
     }
 
-    public int lastIndexOf(Object o) {
-        return list.lastIndexOf(o);
+    public int lastIndexOf(long l) {
+        return list.lastIndexOf(l);
     }
 }

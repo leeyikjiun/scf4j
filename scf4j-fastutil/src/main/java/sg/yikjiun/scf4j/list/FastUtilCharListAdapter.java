@@ -34,8 +34,8 @@ public class FastUtilCharListAdapter implements CharList {
         return list.isEmpty();
     }
 
-    public boolean contains(Object o) {
-        return list.contains(o);
+    public boolean contains(char c) {
+        return list.contains(c);
     }
 
     public char[] toArray() {
@@ -46,8 +46,8 @@ public class FastUtilCharListAdapter implements CharList {
         return list.add(c);
     }
 
-    public boolean remove(Object o) {
-        return list.remove(o);
+    public boolean remove(char c) {
+        return list.remove((Object) c);
     }
 
     public void clear() {
@@ -66,15 +66,15 @@ public class FastUtilCharListAdapter implements CharList {
         list.add(index, c);
     }
 
-    public char remove(int index) {
+    public char removeAt(int index) {
         return list.remove(index);
     }
 
-    public int indexOf(Object o) {
-        return list.indexOf(o);
+    public int indexOf(char c) {
+        return list.indexOf(c);
     }
 
-    public int lastIndexOf(Object o) {
-        return list.lastIndexOf(o);
+    public int lastIndexOf(char c) {
+        return list.lastIndexOf(c);
     }
 }

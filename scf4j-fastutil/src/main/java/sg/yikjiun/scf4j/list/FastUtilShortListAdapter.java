@@ -34,8 +34,8 @@ public class FastUtilShortListAdapter implements ShortList {
         return list.isEmpty();
     }
 
-    public boolean contains(Object o) {
-        return list.contains(o);
+    public boolean contains(short s) {
+        return list.contains(s);
     }
 
     public short[] toArray() {
@@ -46,8 +46,8 @@ public class FastUtilShortListAdapter implements ShortList {
         return list.add(s);
     }
 
-    public boolean remove(Object o) {
-        return list.remove(o);
+    public boolean remove(short s) {
+        return list.remove((Object) s);
     }
 
     public void clear() {
@@ -66,15 +66,15 @@ public class FastUtilShortListAdapter implements ShortList {
         list.add(index, s);
     }
 
-    public short remove(int index) {
+    public short removeAt(int index) {
         return list.remove(index);
     }
 
-    public int indexOf(Object o) {
-        return list.indexOf(o);
+    public int indexOf(short s) {
+        return list.indexOf(s);
     }
 
-    public int lastIndexOf(Object o) {
-        return list.lastIndexOf(o);
+    public int lastIndexOf(short s) {
+        return list.lastIndexOf(s);
     }
 }

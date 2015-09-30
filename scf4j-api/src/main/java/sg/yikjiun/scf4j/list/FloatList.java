@@ -25,13 +25,13 @@ public interface FloatList {
 
     boolean isEmpty();
 
-    boolean contains(Object o);
+    boolean contains(float f);
 
     float[] toArray();
 
     boolean add(float f);
 
-    boolean remove(Object o);
+    boolean remove(float f);
 
     void clear();
 
@@ -41,9 +41,9 @@ public interface FloatList {
 
     void add(int index, float f);
 
-    float remove(int index);
+    float removeAt(int index);
 
-    int indexOf(Object o);
+    int indexOf(float f);
 
-    int lastIndexOf(Object o);
+    int lastIndexOf(float f);
 }

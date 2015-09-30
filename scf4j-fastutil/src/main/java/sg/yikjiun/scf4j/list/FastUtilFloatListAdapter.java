@@ -34,8 +34,8 @@ public class FastUtilFloatListAdapter implements FloatList {
         return list.isEmpty();
     }
 
-    public boolean contains(Object o) {
-        return list.contains(o);
+    public boolean contains(float f) {
+        return list.contains(f);
     }
 
     public float[] toArray() {
@@ -46,8 +46,8 @@ public class FastUtilFloatListAdapter implements FloatList {
         return list.add(f);
     }
 
-    public boolean remove(Object o) {
-        return list.remove(o);
+    public boolean remove(float f) {
+        return list.remove((Object) f);
     }
 
     public void clear() {
@@ -66,15 +66,15 @@ public class FastUtilFloatListAdapter implements FloatList {
         list.add(index, f);
     }
 
-    public float remove(int index) {
+    public float removeAt(int index) {
         return list.remove(index);
     }
 
-    public int indexOf(Object o) {
-        return list.indexOf(o);
+    public int indexOf(float f) {
+        return list.indexOf(f);
     }
 
-    public int lastIndexOf(Object o) {
-        return list.lastIndexOf(o);
+    public int lastIndexOf(float f) {
+        return list.lastIndexOf(f);
     }
 }

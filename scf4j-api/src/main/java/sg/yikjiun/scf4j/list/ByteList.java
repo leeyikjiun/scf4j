@@ -25,13 +25,13 @@ public interface ByteList {
 
     boolean isEmpty();
 
-    boolean contains(Object o);
+    boolean contains(byte b);
 
     byte[] toArray();
 
     boolean add(byte b);
 
-    boolean remove(Object o);
+    boolean remove(byte b);
 
     void clear();
 
@@ -41,9 +41,9 @@ public interface ByteList {
 
     void add(int index, byte b);
 
-    byte remove(int index);
+    byte removeAt(int index);
 
-    int indexOf(Object o);
+    int indexOf(byte b);
 
-    int lastIndexOf(Object o);
+    int lastIndexOf(byte b);
 }

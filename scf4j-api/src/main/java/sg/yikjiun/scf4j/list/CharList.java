@@ -25,13 +25,13 @@ public interface CharList {
 
     boolean isEmpty();
 
-    boolean contains(Object o);
+    boolean contains(char c);
 
     char[] toArray();
 
     boolean add(char c);
 
-    boolean remove(Object o);
+    boolean remove(char c);
 
     void clear();
 
@@ -41,9 +41,9 @@ public interface CharList {
 
     void add(int index, char c);
 
-    char remove(int index);
+    char removeAt(int index);
 
-    int indexOf(Object o);
+    int indexOf(char c);
 
-    int lastIndexOf(Object o);
+    int lastIndexOf(char c);
 }

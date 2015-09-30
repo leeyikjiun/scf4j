@@ -16,15 +16,15 @@
 
 package sg.yikjiun.scf4j.list;
 
-import java.util.List;
+import gnu.trove.list.TDoubleList;
 
 /**
  * @author Lee Yik Jiun
  */
-public class JDKLongListAdapter implements LongList {
-    private final List<Long> list;
+public class TroveDoubleListAdapter implements DoubleList {
+    private final TDoubleList list;
 
-    public JDKLongListAdapter(List<Long> list) {
+    public TroveDoubleListAdapter(TDoubleList list) {
         this.list = list;
     }
 
@@ -36,52 +36,47 @@ public class JDKLongListAdapter implements LongList {
         return list.isEmpty();
     }
 
-    public boolean contains(long l) {
-        return list.contains(l);
+    public boolean contains(double d) {
+        return list.contains(d);
     }
 
-    public long[] toArray() {
-        long[] arr = new long[list.size()];
-        int i = 0;
-        for (Long l : list) {
-            arr[i++] = l;
-        }
-        return arr;
+    public double[] toArray() {
+        return list.toArray();
     }
 
-    public boolean add(long l) {
-        return list.add(l);
+    public boolean add(double d) {
+        return list.add(d);
     }
 
-    public boolean remove(long l) {
-        return list.remove((Object) l);
+    public boolean remove(double d) {
+        return list.remove(d);
     }
 
     public void clear() {
         list.clear();
     }
 
-    public long get(int index) {
+    public double get(int index) {
         return list.get(index);
     }
 
-    public long set(int index, long l) {
-        return list.set(index, l);
+    public double set(int index, double d) {
+        return list.set(index, d);
     }
 
-    public void add(int index, long l) {
-        list.add(index, l);
+    public void add(int index, double d) {
+        list.insert(index, d);
     }
 
-    public long removeAt(int index) {
-        return list.remove(index);
+    public double removeAt(int index) {
+        return list.removeAt(index);
     }
 
-    public int indexOf(long l) {
-        return list.indexOf(l);
+    public int indexOf(double d) {
+        return list.indexOf(d);
     }
 
-    public int lastIndexOf(long l) {
-        return list.lastIndexOf(l);
+    public int lastIndexOf(double d) {
+        return list.lastIndexOf(d);
     }
 }

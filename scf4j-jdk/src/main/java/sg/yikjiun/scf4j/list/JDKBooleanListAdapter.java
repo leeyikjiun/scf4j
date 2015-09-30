@@ -17,6 +17,7 @@
 package sg.yikjiun.scf4j.list;
 
 import java.util.List;
+
 /**
  * @author Lee Yik Jiun
  */
@@ -27,7 +28,7 @@ public class JDKBooleanListAdapter implements BooleanList {
         this.list = list;
     }
 
-public int size() {
+    public int size() {
         return list.size();
     }
 
@@ -35,8 +36,8 @@ public int size() {
         return list.isEmpty();
     }
 
-    public boolean contains(Object o) {
-        return list.contains(o);
+    public boolean contains(boolean b) {
+        return list.contains(b);
     }
 
     public boolean[] toArray() {
@@ -52,8 +53,8 @@ public int size() {
         return list.add(b);
     }
 
-    public boolean remove(Object o) {
-        return list.remove(o);
+    public boolean remove(boolean b) {
+        return list.remove((Object) b);
     }
 
     public void clear() {
@@ -72,15 +73,15 @@ public int size() {
         list.add(index, b);
     }
 
-    public boolean remove(int index) {
+    public boolean removeAt(int index) {
         return list.remove(index);
     }
 
-    public int indexOf(Object o) {
-        return list.indexOf(o);
+    public int indexOf(boolean b) {
+        return list.indexOf(b);
     }
 
-    public int lastIndexOf(Object o) {
-        return list.lastIndexOf(o);
+    public int lastIndexOf(boolean b) {
+        return list.lastIndexOf(b);
     }
 }

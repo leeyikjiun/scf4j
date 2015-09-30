@@ -25,13 +25,13 @@ public interface ShortList {
 
     boolean isEmpty();
 
-    boolean contains(Object o);
+    boolean contains(short s);
 
     short[] toArray();
 
     boolean add(short s);
 
-    boolean remove(Object o);
+    boolean remove(short s);
 
     void clear();
 
@@ -41,9 +41,9 @@ public interface ShortList {
 
     void add(int index, short s);
 
-    short remove(int index);
+    short removeAt(int index);
 
-    int indexOf(Object o);
+    int indexOf(short s);
 
-    int lastIndexOf(Object o);
+    int lastIndexOf(short s);
 }

@@ -16,15 +16,15 @@
 
 package sg.yikjiun.scf4j.list;
 
-import java.util.List;
+import gnu.trove.list.TFloatList;
 
 /**
  * @author Lee Yik Jiun
  */
-public class JDKLongListAdapter implements LongList {
-    private final List<Long> list;
+public class TroveFloatListAdapter implements FloatList {
+    private final TFloatList list;
 
-    public JDKLongListAdapter(List<Long> list) {
+    public TroveFloatListAdapter(TFloatList list) {
         this.list = list;
     }
 
@@ -36,52 +36,47 @@ public class JDKLongListAdapter implements LongList {
         return list.isEmpty();
     }
 
-    public boolean contains(long l) {
-        return list.contains(l);
+    public boolean contains(float f) {
+        return list.contains(f);
     }
 
-    public long[] toArray() {
-        long[] arr = new long[list.size()];
-        int i = 0;
-        for (Long l : list) {
-            arr[i++] = l;
-        }
-        return arr;
+    public float[] toArray() {
+        return list.toArray();
     }
 
-    public boolean add(long l) {
-        return list.add(l);
+    public boolean add(float f) {
+        return list.add(f);
     }
 
-    public boolean remove(long l) {
-        return list.remove((Object) l);
+    public boolean remove(float f) {
+        return list.remove(f);
     }
 
     public void clear() {
         list.clear();
     }
 
-    public long get(int index) {
+    public float get(int index) {
         return list.get(index);
     }
 
-    public long set(int index, long l) {
-        return list.set(index, l);
+    public float set(int index, float f) {
+        return list.set(index, f);
     }
 
-    public void add(int index, long l) {
-        list.add(index, l);
+    public void add(int index, float f) {
+        list.insert(index, f);
     }
 
-    public long removeAt(int index) {
-        return list.remove(index);
+    public float removeAt(int index) {
+        return list.removeAt(index);
     }
 
-    public int indexOf(long l) {
-        return list.indexOf(l);
+    public int indexOf(float f) {
+        return list.indexOf(f);
     }
 
-    public int lastIndexOf(long l) {
-        return list.lastIndexOf(l);
+    public int lastIndexOf(float f) {
+        return list.lastIndexOf(f);
     }
 }

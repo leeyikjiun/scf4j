@@ -25,13 +25,13 @@ public interface DoubleList {
 
     boolean isEmpty();
 
-    boolean contains(Object o);
+    boolean contains(double d);
 
     double[] toArray();
 
     boolean add(double d);
 
-    boolean remove(Object o);
+    boolean remove(double d);
 
     void clear();
 
@@ -41,9 +41,9 @@ public interface DoubleList {
 
     void add(int index, double d);
 
-    double remove(int index);
+    double removeAt(int index);
 
-    int indexOf(Object o);
+    int indexOf(double d);
 
-    int lastIndexOf(Object o);
+    int lastIndexOf(double d);
 }

@@ -34,8 +34,8 @@ public class FastUtilDoubleListAdapter implements DoubleList {
         return list.isEmpty();
     }
 
-    public boolean contains(Object o) {
-        return list.contains(o);
+    public boolean contains(double d) {
+        return list.contains(d);
     }
 
     public double[] toArray() {
@@ -46,8 +46,8 @@ public class FastUtilDoubleListAdapter implements DoubleList {
         return list.add(d);
     }
 
-    public boolean remove(Object o) {
-        return list.remove(o);
+    public boolean remove(double d) {
+        return list.remove((Object) d);
     }
 
     public void clear() {
@@ -66,15 +66,15 @@ public class FastUtilDoubleListAdapter implements DoubleList {
         list.add(index, d);
     }
 
-    public double remove(int index) {
+    public double removeAt(int index) {
         return list.remove(index);
     }
 
-    public int indexOf(Object o) {
-        return list.indexOf(o);
+    public int indexOf(double d) {
+        return list.indexOf(d);
     }
 
-    public int lastIndexOf(Object o) {
-        return list.lastIndexOf(o);
+    public int lastIndexOf(double d) {
+        return list.lastIndexOf(d);
     }
 }

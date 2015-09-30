@@ -16,15 +16,15 @@
 
 package sg.yikjiun.scf4j.list;
 
-import java.util.List;
+import gnu.trove.list.TByteList;
 
 /**
  * @author Lee Yik Jiun
  */
-public class JDKLongListAdapter implements LongList {
-    private final List<Long> list;
+public class TroveByteListAdapter implements ByteList {
+    private final TByteList list;
 
-    public JDKLongListAdapter(List<Long> list) {
+    public TroveByteListAdapter(TByteList list) {
         this.list = list;
     }
 
@@ -36,52 +36,47 @@ public class JDKLongListAdapter implements LongList {
         return list.isEmpty();
     }
 
-    public boolean contains(long l) {
-        return list.contains(l);
+    public boolean contains(byte b) {
+        return list.contains(b);
     }
 
-    public long[] toArray() {
-        long[] arr = new long[list.size()];
-        int i = 0;
-        for (Long l : list) {
-            arr[i++] = l;
-        }
-        return arr;
+    public byte[] toArray() {
+        return list.toArray();
     }
 
-    public boolean add(long l) {
-        return list.add(l);
+    public boolean add(byte b) {
+        return list.add(b);
     }
 
-    public boolean remove(long l) {
-        return list.remove((Object) l);
+    public boolean remove(byte b) {
+        return list.remove(b);
     }
 
     public void clear() {
         list.clear();
     }
 
-    public long get(int index) {
+    public byte get(int index) {
         return list.get(index);
     }
 
-    public long set(int index, long l) {
-        return list.set(index, l);
+    public byte set(int index, byte b) {
+        return list.set(index, b);
     }
 
-    public void add(int index, long l) {
-        list.add(index, l);
+    public void add(int index, byte b) {
+        list.insert(index, b);
     }
 
-    public long removeAt(int index) {
-        return list.remove(index);
+    public byte removeAt(int index) {
+        return list.removeAt(index);
     }
 
-    public int indexOf(long l) {
-        return list.indexOf(l);
+    public int indexOf(byte b) {
+        return list.indexOf(b);
     }
 
-    public int lastIndexOf(long l) {
-        return list.lastIndexOf(l);
+    public int lastIndexOf(byte b) {
+        return list.lastIndexOf(b);
     }
 }

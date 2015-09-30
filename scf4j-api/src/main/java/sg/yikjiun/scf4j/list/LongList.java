@@ -25,13 +25,13 @@ public interface LongList {
 
     boolean isEmpty();
 
-    boolean contains(Object o);
+    boolean contains(long l);
 
     long[] toArray();
 
     boolean add(long l);
 
-    boolean remove(Object o);
+    boolean remove(long l);
 
     void clear();
 
@@ -41,9 +41,9 @@ public interface LongList {
 
     void add(int index, long l);
 
-    long remove(int index);
+    long removeAt(int index);
 
-    int indexOf(Object o);
+    int indexOf(long l);
 
-    int lastIndexOf(Object o);
+    int lastIndexOf(long l);
 }

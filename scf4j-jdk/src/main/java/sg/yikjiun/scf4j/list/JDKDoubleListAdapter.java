@@ -17,6 +17,7 @@
 package sg.yikjiun.scf4j.list;
 
 import java.util.List;
+
 /**
  * @author Lee Yik Jiun
  */
@@ -27,7 +28,7 @@ public class JDKDoubleListAdapter implements DoubleList {
         this.list = list;
     }
 
-public int size() {
+    public int size() {
         return list.size();
     }
 
@@ -35,8 +36,8 @@ public int size() {
         return list.isEmpty();
     }
 
-    public boolean contains(Object o) {
-        return list.contains(o);
+    public boolean contains(double d) {
+        return list.contains(d);
     }
 
     public double[] toArray() {
@@ -52,8 +53,8 @@ public int size() {
         return list.add(d);
     }
 
-    public boolean remove(Object o) {
-        return list.remove(o);
+    public boolean remove(double d) {
+        return list.remove((Object) d);
     }
 
     public void clear() {
@@ -72,15 +73,15 @@ public int size() {
         list.add(index, d);
     }
 
-    public double remove(int index) {
+    public double removeAt(int index) {
         return list.remove(index);
     }
 
-    public int indexOf(Object o) {
-        return list.indexOf(o);
+    public int indexOf(double d) {
+        return list.indexOf(d);
     }
 
-    public int lastIndexOf(Object o) {
-        return list.lastIndexOf(o);
+    public int lastIndexOf(double d) {
+        return list.lastIndexOf(d);
     }
 }
