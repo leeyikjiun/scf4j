@@ -23,82 +23,306 @@ import sg.yikjiun.scf4j.list.impl.ListFactoryProvider;
  */
 public class ListFactory {
     public static ByteList createByteArrayList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
-        return factory.createByteArrayList();
+        return createByteArrayList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static ByteList createByteArrayList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createByteArrayList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static ByteList createByteArrayList(ListFactoryDelegate factory) {
+        return factory.createByteLinkedList();
     }
 
     public static BooleanList createBooleanArrayList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
-        return factory.createBooleanArrayList();
+        return createBooleanArrayList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static BooleanList createBooleanArrayList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createBooleanArrayList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static BooleanList createBooleanArrayList(ListFactoryDelegate factory) {
+        return factory.createBooleanLinkedList();
     }
 
     public static ShortList createShortArrayList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
-        return factory.createShortArrayList();
+        return createShortArrayList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static ShortList createShortArrayList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createShortArrayList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static ShortList createShortArrayList(ListFactoryDelegate factory) {
+        return factory.createShortLinkedList();
     }
 
     public static IntList createIntArrayList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
-        return factory.createIntArrayList();
+        return createIntArrayList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static IntList createIntArrayList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createIntArrayList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static IntList createIntArrayList(ListFactoryDelegate factory) {
+        return factory.createIntLinkedList();
     }
 
     public static LongList createLongArrayList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
-        return factory.createLongArrayList();
+        return createLongArrayList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static LongList createLongArrayList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createLongArrayList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static LongList createLongArrayList(ListFactoryDelegate factory) {
+        return factory.createLongLinkedList();
     }
 
     public static DoubleList createDoubleArrayList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
-        return factory.createDoubleArrayList();
+        return createDoubleArrayList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static DoubleList createDoubleArrayList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createDoubleArrayList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static DoubleList createDoubleArrayList(ListFactoryDelegate factory) {
+        return factory.createDoubleLinkedList();
     }
 
     public static FloatList createFloatArrayList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
-        return factory.createFloatArrayList();
+        return createFloatArrayList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static FloatList createFloatArrayList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createFloatArrayList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static FloatList createFloatArrayList(ListFactoryDelegate factory) {
+        return factory.createFloatLinkedList();
     }
 
     public static CharList createCharArrayList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
-        return factory.createCharArrayList();
+        return createCharArrayList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static CharList createCharArrayList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createCharArrayList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static CharList createCharArrayList(ListFactoryDelegate factory) {
+        return factory.createCharLinkedList();
     }
 
     public static ByteList createByteLinkedList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
+        return createByteLinkedList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static ByteList createByteLinkedList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createByteLinkedList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static ByteList createByteLinkedList(ListFactoryDelegate factory) {
         return factory.createByteLinkedList();
     }
 
     public static BooleanList createBooleanLinkedList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
+        return createBooleanLinkedList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static BooleanList createBooleanLinkedList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createBooleanLinkedList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static BooleanList createBooleanLinkedList(ListFactoryDelegate factory) {
         return factory.createBooleanLinkedList();
     }
 
     public static ShortList createShortLinkedList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
+        return createShortLinkedList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static ShortList createShortLinkedList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createShortLinkedList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static ShortList createShortLinkedList(ListFactoryDelegate factory) {
         return factory.createShortLinkedList();
     }
 
     public static IntList createIntLinkedList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
+        return createIntLinkedList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static IntList createIntLinkedList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createIntLinkedList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static IntList createIntLinkedList(ListFactoryDelegate factory) {
         return factory.createIntLinkedList();
     }
 
     public static LongList createLongLinkedList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
+        return createLongLinkedList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static LongList createLongLinkedList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createLongLinkedList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static LongList createLongLinkedList(ListFactoryDelegate factory) {
         return factory.createLongLinkedList();
     }
 
     public static DoubleList createDoubleLinkedList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
+        return createDoubleLinkedList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static DoubleList createDoubleLinkedList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createDoubleLinkedList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static DoubleList createDoubleLinkedList(ListFactoryDelegate factory) {
         return factory.createDoubleLinkedList();
     }
 
     public static FloatList createFloatLinkedList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
+        return createFloatLinkedList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static FloatList createFloatLinkedList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createFloatLinkedList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static FloatList createFloatLinkedList(ListFactoryDelegate factory) {
         return factory.createFloatLinkedList();
     }
 
     public static CharList createCharLinkedList() {
-        ListFactoryDelegate factory = ListFactoryProvider.getInstance().getListFactory();
+        return createCharLinkedList(ListFactoryProvider.getInstance().getListFactory());
+    }
+
+    public static CharList createCharLinkedList(Class<ListFactoryDelegate> clazz) {
+        try {
+            ListFactoryDelegate factory = clazz.newInstance();
+            return createCharLinkedList(factory);
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    private static CharList createCharLinkedList(ListFactoryDelegate factory) {
         return factory.createCharLinkedList();
     }
 }

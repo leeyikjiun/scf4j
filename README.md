@@ -11,7 +11,7 @@ Simply include the scf4j-api and one of the following in your classpath:
 Using a single Collections framework.
 ```
 // to use the default implementation
-IntIntMap map = IntIntMapFactory.createIntIntHashMap();
+IntIntMap map = MapFactory.createIntIntHashMap();
 
 // do something with map
 map.push(1,2);
@@ -20,8 +20,8 @@ map.get(1);
 Using multiple Collections frameworks.
 ```
 // to use Trove's Map and FastUtil's Set
-IntIntMap troveMap = IntIntMapFactory.createIntIntHashMap(TroveIntIntMapFactory.class);
-IntSet fastUtilSet = IntSetFactory.createIntHashSet(FastUtilIntSetFactory.class);
+IntIntMap troveMap = MapFactory.createIntIntHashMap(TroveMapFactory.class);
+IntSet fastUtilSet = SetFactory.createIntHashSet(FastUtilSetFactory.class);
 
 // do something with map
 troveMap.push(1,2);
