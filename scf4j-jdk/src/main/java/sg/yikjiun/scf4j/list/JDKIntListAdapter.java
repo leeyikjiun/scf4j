@@ -43,8 +43,8 @@ public class JDKIntListAdapter implements IntList {
     public int[] toArray() {
         int[] arr = new int[list.size()];
         int i = 0;
-        for (Integer i : list) {
-            arr[i++] = i;
+        for (Integer integer : list) {
+            arr[i++] = integer;
         }
         return arr;
     }
